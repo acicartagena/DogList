@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3573BF7E2476993600F20A30 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573BF7D2476993600F20A30 /* Networking.swift */; };
+		3573BF8124769B2400F20A30 /* BrightFutures in Frameworks */ = {isa = PBXBuildFile; productRef = 3573BF8024769B2400F20A30 /* BrightFutures */; };
 		3592193E24762E3A009BEFE1 /* UIImageView+ImageFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3592193D24762E3A009BEFE1 /* UIImageView+ImageFetch.swift */; };
 		35C4BF13247605880041764E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF12247605880041764E /* AppDelegate.swift */; };
 		35C4BF1C247605890041764E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C4BF1B247605890041764E /* Assets.xcassets */; };
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3573BF7D2476993600F20A30 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		3592193D24762E3A009BEFE1 /* UIImageView+ImageFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageFetch.swift"; sourceTree = "<group>"; };
 		35C4BF0F247605880041764E /* DogList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C4BF12247605880041764E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C4BF3624760E480041764E /* Kingfisher in Frameworks */,
+				3573BF8124769B2400F20A30 /* BrightFutures in Frameworks */,
 				35C4BF3924760ED30041764E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3592193F24764038009BEFE1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3573BF7D2476993600F20A30 /* Networking.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		35C4BF06247605880041764E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				35C4BF12247605880041764E /* AppDelegate.swift */,
+				3592193F24764038009BEFE1 /* API */,
 				35C4BF4824761AEF0041764E /* Models */,
 				35C4BF452476177E0041764E /* Extensions */,
 				35C4BF402476170C0041764E /* UI */,
@@ -161,6 +174,7 @@
 			packageProductDependencies = (
 				35C4BF3524760E480041764E /* Kingfisher */,
 				35C4BF3824760ED30041764E /* SnapKit */,
+				3573BF8024769B2400F20A30 /* BrightFutures */,
 			);
 			productName = DogList;
 			productReference = 35C4BF0F247605880041764E /* DogList.app */;
@@ -215,6 +229,7 @@
 			packageReferences = (
 				35C4BF3424760E480041764E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				35C4BF3724760ED30041764E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3573BF7F24769B2400F20A30 /* XCRemoteSwiftPackageReference "BrightFutures" */,
 			);
 			productRefGroup = 35C4BF10247605880041764E /* Products */;
 			projectDirPath = "";
@@ -251,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C4BF3B247614BF0041764E /* DogListViewController.swift in Sources */,
+				3573BF7E2476993600F20A30 /* Networking.swift in Sources */,
 				35C4BF47247617960041764E /* CGFloat+Spacing.swift in Sources */,
 				35C4BF13247605880041764E /* AppDelegate.swift in Sources */,
 				35C4BF42247617310041764E /* UITableView+CellRegistration.swift in Sources */,
@@ -521,6 +537,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3573BF7F24769B2400F20A30 /* XCRemoteSwiftPackageReference "BrightFutures" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Thomvis/BrightFutures";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.1;
+			};
+		};
 		35C4BF3424760E480041764E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -540,6 +564,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3573BF8024769B2400F20A30 /* BrightFutures */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3573BF7F24769B2400F20A30 /* XCRemoteSwiftPackageReference "BrightFutures" */;
+			productName = BrightFutures;
+		};
 		35C4BF3524760E480041764E /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 35C4BF3424760E480041764E /* XCRemoteSwiftPackageReference "Kingfisher" */;
