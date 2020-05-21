@@ -56,6 +56,7 @@
 		3573BF912476C37500F20A30 /* DogListViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewModelDelegateSpy.swift; sourceTree = "<group>"; };
 		3573BF942476C4FC00F20A30 /* DogBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBuilder.swift; sourceTree = "<group>"; };
 		3573BF962476CA1900F20A30 /* UIViewController+ShowsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowsError.swift"; sourceTree = "<group>"; };
+		3573BF982476CDF100F20A30 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3592193D24762E3A009BEFE1 /* UIImageView+ImageFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageFetch.swift"; sourceTree = "<group>"; };
 		35C4BF0F247605880041764E /* DogList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C4BF12247605880041764E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 		35C4BF06247605880041764E = {
 			isa = PBXGroup;
 			children = (
+				3573BF982476CDF100F20A30 /* README.md */,
 				35C4BF11247605880041764E /* DogList */,
 				35C4BF28247605890041764E /* DogListTests */,
 				35C4BF10247605880041764E /* Products */,
