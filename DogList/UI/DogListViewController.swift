@@ -33,6 +33,7 @@ class DogListViewController: UIViewController {
 
         view.backgroundColor = .blue
         setupUI()
+        viewModel.start()
     }
 
     private func setupUI() {

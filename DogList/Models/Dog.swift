@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct Dog {
+struct Dog: Equatable {
     enum LifeSpanYear {
         typealias Min = Int
         typealias Max = Int

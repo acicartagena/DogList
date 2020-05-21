@@ -19,10 +19,13 @@ class DogListViewModel {
     init(actions: DogListActions = DogListService(), threadingModel: @escaping ThreadingModel = DefaultThreadingModel) {
         self.actions = actions
         self.threadingModel = threadingModel
+    }
+
+    func start() {
         fetchItems()
     }
 
-    func fetchItems() {
+    private func fetchItems() {
         actions.fetchImages().onComplete(context) { [weak self] result in
             guard let self = self else { return }
             switch result {
