@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		35C4BF13247605880041764E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF12247605880041764E /* AppDelegate.swift */; };
-		35C4BF15247605880041764E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF14247605880041764E /* SceneDelegate.swift */; };
 		35C4BF17247605880041764E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF16247605880041764E /* ViewController.swift */; };
 		35C4BF1A247605880041764E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C4BF18247605880041764E /* Main.storyboard */; };
 		35C4BF1C247605890041764E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C4BF1B247605890041764E /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		35C4BF0F247605880041764E /* DogList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C4BF12247605880041764E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35C4BF14247605880041764E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		35C4BF16247605880041764E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35C4BF19247605880041764E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35C4BF1B247605890041764E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				35C4BF12247605880041764E /* AppDelegate.swift */,
-				35C4BF14247605880041764E /* SceneDelegate.swift */,
 				35C4BF16247605880041764E /* ViewController.swift */,
 				35C4BF18247605880041764E /* Main.storyboard */,
 				35C4BF1B247605890041764E /* Assets.xcassets */,
@@ -202,7 +199,6 @@
 			files = (
 				35C4BF17247605880041764E /* ViewController.swift in Sources */,
 				35C4BF13247605880041764E /* AppDelegate.swift in Sources */,
-				35C4BF15247605880041764E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWW575E2Q5;
 				INFOPLIST_FILE = DogList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.acicartagena.DogList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWW575E2Q5;
 				INFOPLIST_FILE = DogList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.acicartagena.DogList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
