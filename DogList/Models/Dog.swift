@@ -19,9 +19,9 @@ struct Dog {
     }
 
     let name: String
-    let lifeSpan: LifeSpanYear
+    let lifeSpan: LifeSpanYear?
     let imageURL: URL
-    let temperament: String
+    let temperament: String?
 }
 
 extension Dog.LifeSpanYear: Equatable {
