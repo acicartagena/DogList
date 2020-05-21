@@ -9,4 +9,8 @@ class DogListViewModelDelegateSpy: DogListViewModelDelegate {
     func reloadData() {
         calls.append("reloadData()")
     }
+
+    func showError(message: String) {
+        calls.append("showError(message: \(message))")
+    }
 }

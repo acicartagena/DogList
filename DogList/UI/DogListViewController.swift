@@ -37,12 +37,27 @@ class DogListViewController: UIViewController {
     }
 
     private func setupUI() {
-        navigationItem.title = NSLocalizedString("DogList", comment: "")
+        navigationItem.title = viewModel.title
 
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.top.leading.trailing.bottom.equalToSuperview()
         }
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: viewModel.sortActionTitle, style: .plain, target: self, action: #selector(sort))
+    }
+
+    @objc
+    func sort() {
+        let alert = UIAlertController(title: viewModel.sortActionDescription, message: nil, preferredStyle: .actionSheet)
+        for sortBy in DogListViewModel.SortBy.allCases {
+            let action = UIAlertAction(title: sortBy.title, style: .default) { [weak self] _ in
+                self?.viewModel.sort(by: sortBy)
+            }
+            alert.addAction(action)
+        }
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 

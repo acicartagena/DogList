@@ -183,9 +183,9 @@
 		35C4BF452476177E0041764E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				35C4BF41247617310041764E /* UITableView+CellRegistration.swift */,
 				3573BF962476CA1900F20A30 /* UIViewController+ShowsError.swift */,
 				3592193D24762E3A009BEFE1 /* UIImageView+ImageFetch.swift */,
+				35C4BF41247617310041764E /* UITableView+CellRegistration.swift */,
 				35C4BF43247617520041764E /* UITableViewCell+Reuse.swift */,
 				35C4BF46247617960041764E /* CGFloat+Spacing.swift */,
 			);

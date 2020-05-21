@@ -29,6 +29,8 @@ DogList gets a list of dogs and displays their image and supporting information
 
 
 ## Assumptions
+* Initial data fetched is not going to be sorted. 
+* Sorting would apply to data fetched on launch and would not trigger a new network call
 * Lifespan years have only 2 valid formats: "x - y years" and "z years". Any other format would either result to wrong or invalid data. 
 * When the lifespan is in range form, it's average is used for comparisons.
 * When handling data in an array that is malformed or invalid, that data isn't included in the response and no error is raised. This is to simplify the implementation. This behavior can be modified in the DogListService mapping. 
