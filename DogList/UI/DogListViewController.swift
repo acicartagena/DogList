@@ -45,10 +45,13 @@ class DogListViewController: UIViewController {
 
 extension DogListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return DogListCell()
+        let item = viewModel.items[indexPath.row]
+        let cell: DogListCell = tableView.dequeCell(for: indexPath)
+        cell.configure(with: item)
+        return cell
     }
 }

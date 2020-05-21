@@ -3,16 +3,7 @@
 import Foundation
 
 class DogListViewModel {
-    
+    private(set) var items: [Dog] = [Dog(name: "Akbash Dog", lifeSpan: .range(10,12), imageURL: URL(string: "https://cdn2.thedogapi.com/images/SyfsC19NQ_1280.jpg")!, temperament: "Loyal, Independent, Intelligent, Brave")]
 }
 
-extension Dog.LifeSpanYear {
-    var display: String {
-        switch self {
-        case let .range(min, max):
-            return String.localizedStringWithFormat(NSLocalizedString("%i - %i years", comment: "Life span years with range"), min, max)
-        case let .constant(value):
-            return String.localizedStringWithFormat(NSLocalizedString("%i years", comment: "Life span constant value"), value)
-        }
-    }
-}
+
