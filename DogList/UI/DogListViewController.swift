@@ -11,6 +11,8 @@ class DogListViewController: UIViewController {
         tableView.estimatedRowHeight = 100.0
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
+
+        tableView.register(DogListCell.self)
         return tableView
     }()
 

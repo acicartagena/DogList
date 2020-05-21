@@ -19,6 +19,7 @@
 		35C4BF42247617310041764E /* UITableView+CellRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF41247617310041764E /* UITableView+CellRegistration.swift */; };
 		35C4BF44247617520041764E /* UITableViewCell+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF43247617520041764E /* UITableViewCell+Reuse.swift */; };
 		35C4BF47247617960041764E /* CGFloat+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF46247617960041764E /* CGFloat+Spacing.swift */; };
+		35C4BF4A24761D9E0041764E /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF4924761D9E0041764E /* Dog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		35C4BF41247617310041764E /* UITableView+CellRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellRegistration.swift"; sourceTree = "<group>"; };
 		35C4BF43247617520041764E /* UITableViewCell+Reuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reuse.swift"; sourceTree = "<group>"; };
 		35C4BF46247617960041764E /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
+		35C4BF4924761D9E0041764E /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				35C4BF12247605880041764E /* AppDelegate.swift */,
+				35C4BF4824761AEF0041764E /* Models */,
 				35C4BF452476177E0041764E /* Extensions */,
 				35C4BF402476170C0041764E /* UI */,
 				35C4BF1B247605890041764E /* Assets.xcassets */,
@@ -126,6 +129,14 @@
 				35C4BF46247617960041764E /* CGFloat+Spacing.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		35C4BF4824761AEF0041764E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35C4BF4924761D9E0041764E /* Dog.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +253,7 @@
 				35C4BF42247617310041764E /* UITableView+CellRegistration.swift in Sources */,
 				35C4BF3D247615660041764E /* DogListCell.swift in Sources */,
 				35C4BF44247617520041764E /* UITableViewCell+Reuse.swift in Sources */,
+				35C4BF4A24761D9E0041764E /* Dog.swift in Sources */,
 				35C4BF3F2476168B0041764E /* DogListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
