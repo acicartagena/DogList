@@ -8,7 +8,7 @@ class DogListViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100.0
+        tableView.estimatedRowHeight = 180.0
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
 
@@ -20,8 +20,8 @@ class DogListViewController: UIViewController {
 
     init() {
         viewModel = DogListViewModel()
-
         super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
     }
 
     required init?(coder: NSCoder) {
@@ -53,5 +53,11 @@ extension DogListViewController: UITableViewDataSource {
         let cell: DogListCell = tableView.dequeCell(for: indexPath)
         cell.configure(with: item)
         return cell
+    }
+}
+
+extension DogListViewController: DogListViewModelDelegate {
+    func reloadData() {
+        tableView.reloadData()
     }
 }

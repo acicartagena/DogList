@@ -16,7 +16,7 @@ extension Dog.LifeSpanYear {
 
 class DogListCell: UITableViewCell {
 
-    private static let imageSize = CGSize(width: 100, height: 100)
+    private static let imageSize = CGSize(width: 160, height: 120)
 
     private let nameLabel: UILabel = {
         let label = UILabel()
@@ -57,31 +57,37 @@ class DogListCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        dogImageView.prepareForReuse()
+    }
+
     func setupUI() {
         contentView.addSubview(dogImageView)
         dogImageView.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().offset(CGFloat.margin)
             make.size.equalTo(DogListCell.imageSize)
             make.bottom.equalToSuperview().inset(CGFloat.margin).priority(.medium)
+            make.bottom.lessThanOrEqualToSuperview().inset(CGFloat.margin).priority(.high)
         }
 
         let labelsStack = UIStackView(arrangedSubviews: [nameLabel, temperamentLabel, lifeSpanLabel])
         labelsStack.axis = .vertical
-        labelsStack.spacing = CGFloat.between
+        labelsStack.spacing = CGFloat.related
 
         contentView.addSubview(labelsStack)
         labelsStack.snp.makeConstraints { make in
             make.top.equalTo(dogImageView.snp.top)
             make.leading.equalTo(dogImageView.snp.trailing).offset(CGFloat.between)
             make.trailing.equalToSuperview().inset(CGFloat.margin)
-            make.bottom.greaterThanOrEqualToSuperview().inset(CGFloat.margin).priority(.high)
+            make.bottom.lessThanOrEqualToSuperview().inset(CGFloat.margin).priority(.high)
         }
     }
 
     func configure(with dog: Dog) {
         nameLabel.text = dog.name
         temperamentLabel.text = dog.temperament
-        lifeSpanLabel.text = dog.lifeSpan.display
+        lifeSpanLabel.text = dog.lifeSpan?.display
         dogImageView.setImage(dog.imageURL)
     }
 }

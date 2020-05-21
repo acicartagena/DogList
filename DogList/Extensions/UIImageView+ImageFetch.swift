@@ -21,6 +21,5 @@ extension UIImageView {
             case let .failure(error): downloadFinished?(.failure(error))
             }
         }
-        sizeToFit()
     }
 }
