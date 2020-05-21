@@ -1,18 +1,17 @@
-//
-//  AppDelegate.swift
-//  DogList
-//
-//  Created by Angela Cartagena on 21/5/20.
 //  Copyright © 2020 ACartagena. All rights reserved.
-//
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    var window: UIWindow?
+
+    func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow()
+        window?.rootViewController = UIViewController()
+        window?.makeKeyAndVisible()
+
         return true
     }
 

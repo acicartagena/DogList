@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  DogList
-//
-//  Created by Angela Cartagena on 21/5/20.
 //  Copyright © 2020 ACartagena. All rights reserved.
-//
 
 import UIKit
 

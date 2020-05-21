@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		35C4BF13247605880041764E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF12247605880041764E /* AppDelegate.swift */; };
 		35C4BF17247605880041764E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF16247605880041764E /* ViewController.swift */; };
-		35C4BF1A247605880041764E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C4BF18247605880041764E /* Main.storyboard */; };
 		35C4BF1C247605890041764E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C4BF1B247605890041764E /* Assets.xcassets */; };
 		35C4BF1F247605890041764E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C4BF1D247605890041764E /* LaunchScreen.storyboard */; };
 		35C4BF2A247605890041764E /* DogListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF29247605890041764E /* DogListTests.swift */; };
@@ -29,7 +28,6 @@
 		35C4BF0F247605880041764E /* DogList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C4BF12247605880041764E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35C4BF16247605880041764E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		35C4BF19247605880041764E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35C4BF1B247605890041764E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35C4BF1E247605890041764E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35C4BF20247605890041764E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 			children = (
 				35C4BF12247605880041764E /* AppDelegate.swift */,
 				35C4BF16247605880041764E /* ViewController.swift */,
-				35C4BF18247605880041764E /* Main.storyboard */,
 				35C4BF1B247605890041764E /* Assets.xcassets */,
 				35C4BF1D247605890041764E /* LaunchScreen.storyboard */,
 				35C4BF20247605890041764E /* Info.plist */,
@@ -179,7 +176,6 @@
 			files = (
 				35C4BF1F247605890041764E /* LaunchScreen.storyboard in Resources */,
 				35C4BF1C247605890041764E /* Assets.xcassets in Resources */,
-				35C4BF1A247605880041764E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +217,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		35C4BF18247605880041764E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35C4BF19247605880041764E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		35C4BF1D247605890041764E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -369,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.acicartagena.DogList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -388,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.acicartagena.DogList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
