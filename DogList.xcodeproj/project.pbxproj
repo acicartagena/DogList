@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		35C4BF13247605880041764E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF12247605880041764E /* AppDelegate.swift */; };
-		35C4BF17247605880041764E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF16247605880041764E /* ViewController.swift */; };
 		35C4BF1C247605890041764E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C4BF1B247605890041764E /* Assets.xcassets */; };
 		35C4BF1F247605890041764E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C4BF1D247605890041764E /* LaunchScreen.storyboard */; };
 		35C4BF2A247605890041764E /* DogListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF29247605890041764E /* DogListTests.swift */; };
 		35C4BF3624760E480041764E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 35C4BF3524760E480041764E /* Kingfisher */; };
 		35C4BF3924760ED30041764E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 35C4BF3824760ED30041764E /* SnapKit */; };
+		35C4BF3B247614BF0041764E /* DogListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF3A247614BF0041764E /* DogListViewController.swift */; };
+		35C4BF3D247615660041764E /* DogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF3C247615660041764E /* DogListCell.swift */; };
+		35C4BF3F2476168B0041764E /* DogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF3E2476168B0041764E /* DogListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 /* Begin PBXFileReference section */
 		35C4BF0F247605880041764E /* DogList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C4BF12247605880041764E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35C4BF16247605880041764E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35C4BF1B247605890041764E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35C4BF1E247605890041764E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35C4BF20247605890041764E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C4BF25247605890041764E /* DogListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C4BF29247605890041764E /* DogListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListTests.swift; sourceTree = "<group>"; };
 		35C4BF2B247605890041764E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35C4BF3A247614BF0041764E /* DogListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewController.swift; sourceTree = "<group>"; };
+		35C4BF3C247615660041764E /* DogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListCell.swift; sourceTree = "<group>"; };
+		35C4BF3E2476168B0041764E /* DogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				35C4BF12247605880041764E /* AppDelegate.swift */,
-				35C4BF16247605880041764E /* ViewController.swift */,
+				35C4BF3E2476168B0041764E /* DogListViewModel.swift */,
+				35C4BF3A247614BF0041764E /* DogListViewController.swift */,
+				35C4BF3C247615660041764E /* DogListCell.swift */,
 				35C4BF1B247605890041764E /* Assets.xcassets */,
 				35C4BF1D247605890041764E /* LaunchScreen.storyboard */,
 				35C4BF20247605890041764E /* Info.plist */,
@@ -205,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35C4BF17247605880041764E /* ViewController.swift in Sources */,
+				35C4BF3B247614BF0041764E /* DogListViewController.swift in Sources */,
 				35C4BF13247605880041764E /* AppDelegate.swift in Sources */,
+				35C4BF3D247615660041764E /* DogListCell.swift in Sources */,
+				35C4BF3F2476168B0041764E /* DogListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

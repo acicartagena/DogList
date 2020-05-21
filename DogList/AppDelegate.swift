@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        window?.rootViewController = UIViewController()
+        window?.rootViewController = UINavigationController(rootViewController: DogListViewController())
         window?.makeKeyAndVisible()
 
         return true
