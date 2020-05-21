@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3573BF7E2476993600F20A30 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573BF7D2476993600F20A30 /* Networking.swift */; };
 		3573BF8124769B2400F20A30 /* BrightFutures in Frameworks */ = {isa = PBXBuildFile; productRef = 3573BF8024769B2400F20A30 /* BrightFutures */; };
+		3573BF8324769CEC00F20A30 /* DogListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573BF8224769CEC00F20A30 /* DogListService.swift */; };
+		3573BF852476A44E00F20A30 /* DogListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573BF842476A44E00F20A30 /* DogListResponse.swift */; };
+		3573BF872476A62B00F20A30 /* Dog+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573BF862476A62B00F20A30 /* Dog+Response.swift */; };
+		3573BF892476A6AD00F20A30 /* DogListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3573BF882476A6AD00F20A30 /* DogListError.swift */; };
 		3592193E24762E3A009BEFE1 /* UIImageView+ImageFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3592193D24762E3A009BEFE1 /* UIImageView+ImageFetch.swift */; };
 		35C4BF13247605880041764E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF12247605880041764E /* AppDelegate.swift */; };
 		35C4BF1C247605890041764E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C4BF1B247605890041764E /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		3573BF7D2476993600F20A30 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		3573BF8224769CEC00F20A30 /* DogListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListService.swift; sourceTree = "<group>"; };
+		3573BF842476A44E00F20A30 /* DogListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListResponse.swift; sourceTree = "<group>"; };
+		3573BF862476A62B00F20A30 /* Dog+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dog+Response.swift"; sourceTree = "<group>"; };
+		3573BF882476A6AD00F20A30 /* DogListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListError.swift; sourceTree = "<group>"; };
 		3592193D24762E3A009BEFE1 /* UIImageView+ImageFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageFetch.swift"; sourceTree = "<group>"; };
 		35C4BF0F247605880041764E /* DogList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C4BF12247605880041764E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +87,10 @@
 		3592193F24764038009BEFE1 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				3573BF862476A62B00F20A30 /* Dog+Response.swift */,
+				3573BF842476A44E00F20A30 /* DogListResponse.swift */,
+				3573BF882476A6AD00F20A30 /* DogListError.swift */,
+				3573BF8224769CEC00F20A30 /* DogListService.swift */,
 				3573BF7D2476993600F20A30 /* Networking.swift */,
 			);
 			path = API;
@@ -268,11 +280,15 @@
 				35C4BF3B247614BF0041764E /* DogListViewController.swift in Sources */,
 				3573BF7E2476993600F20A30 /* Networking.swift in Sources */,
 				35C4BF47247617960041764E /* CGFloat+Spacing.swift in Sources */,
+				3573BF872476A62B00F20A30 /* Dog+Response.swift in Sources */,
 				35C4BF13247605880041764E /* AppDelegate.swift in Sources */,
+				3573BF8324769CEC00F20A30 /* DogListService.swift in Sources */,
+				3573BF852476A44E00F20A30 /* DogListResponse.swift in Sources */,
 				35C4BF42247617310041764E /* UITableView+CellRegistration.swift in Sources */,
 				35C4BF3D247615660041764E /* DogListCell.swift in Sources */,
 				35C4BF44247617520041764E /* UITableViewCell+Reuse.swift in Sources */,
 				3592193E24762E3A009BEFE1 /* UIImageView+ImageFetch.swift in Sources */,
+				3573BF892476A6AD00F20A30 /* DogListError.swift in Sources */,
 				35C4BF4A24761D9E0041764E /* Dog.swift in Sources */,
 				35C4BF3F2476168B0041764E /* DogListViewModel.swift in Sources */,
 			);
