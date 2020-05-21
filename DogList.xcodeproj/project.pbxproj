@@ -16,6 +16,9 @@
 		35C4BF3B247614BF0041764E /* DogListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF3A247614BF0041764E /* DogListViewController.swift */; };
 		35C4BF3D247615660041764E /* DogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF3C247615660041764E /* DogListCell.swift */; };
 		35C4BF3F2476168B0041764E /* DogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF3E2476168B0041764E /* DogListViewModel.swift */; };
+		35C4BF42247617310041764E /* UITableView+CellRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF41247617310041764E /* UITableView+CellRegistration.swift */; };
+		35C4BF44247617520041764E /* UITableViewCell+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF43247617520041764E /* UITableViewCell+Reuse.swift */; };
+		35C4BF47247617960041764E /* CGFloat+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4BF46247617960041764E /* CGFloat+Spacing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		35C4BF3A247614BF0041764E /* DogListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewController.swift; sourceTree = "<group>"; };
 		35C4BF3C247615660041764E /* DogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListCell.swift; sourceTree = "<group>"; };
 		35C4BF3E2476168B0041764E /* DogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewModel.swift; sourceTree = "<group>"; };
+		35C4BF41247617310041764E /* UITableView+CellRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellRegistration.swift"; sourceTree = "<group>"; };
+		35C4BF43247617520041764E /* UITableViewCell+Reuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reuse.swift"; sourceTree = "<group>"; };
+		35C4BF46247617960041764E /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				35C4BF12247605880041764E /* AppDelegate.swift */,
-				35C4BF3E2476168B0041764E /* DogListViewModel.swift */,
-				35C4BF3A247614BF0041764E /* DogListViewController.swift */,
-				35C4BF3C247615660041764E /* DogListCell.swift */,
+				35C4BF452476177E0041764E /* Extensions */,
+				35C4BF402476170C0041764E /* UI */,
 				35C4BF1B247605890041764E /* Assets.xcassets */,
 				35C4BF1D247605890041764E /* LaunchScreen.storyboard */,
 				35C4BF20247605890041764E /* Info.plist */,
@@ -101,6 +106,26 @@
 				35C4BF2B247605890041764E /* Info.plist */,
 			);
 			path = DogListTests;
+			sourceTree = "<group>";
+		};
+		35C4BF402476170C0041764E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				35C4BF3E2476168B0041764E /* DogListViewModel.swift */,
+				35C4BF3A247614BF0041764E /* DogListViewController.swift */,
+				35C4BF3C247615660041764E /* DogListCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		35C4BF452476177E0041764E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35C4BF41247617310041764E /* UITableView+CellRegistration.swift */,
+				35C4BF43247617520041764E /* UITableViewCell+Reuse.swift */,
+				35C4BF46247617960041764E /* CGFloat+Spacing.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C4BF3B247614BF0041764E /* DogListViewController.swift in Sources */,
+				35C4BF47247617960041764E /* CGFloat+Spacing.swift in Sources */,
 				35C4BF13247605880041764E /* AppDelegate.swift in Sources */,
+				35C4BF42247617310041764E /* UITableView+CellRegistration.swift in Sources */,
 				35C4BF3D247615660041764E /* DogListCell.swift in Sources */,
+				35C4BF44247617520041764E /* UITableViewCell+Reuse.swift in Sources */,
 				35C4BF3F2476168B0041764E /* DogListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
