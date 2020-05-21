@@ -3,7 +3,7 @@
 import Foundation
 import BrightFutures
 
-protocol DogListViewModelDelegate: AnyObject {
+protocol DogListViewModelDelegate: AnyObject, ShowsError {
     func reloadData()
 }
 
@@ -33,7 +33,7 @@ class DogListViewModel {
                 self.items = dogs
                 self.delegate?.reloadData()
             case .failure(let error):
-                print(error)
+                self.delegate?.showError(message: error.displayError)
             }
         }
     }
