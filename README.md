@@ -1,6 +1,6 @@
 #  DogList
 ## App
-DogList gets a list of dogs and displays their image and supporting information
+DogList gets a list of dogs using https://api.thedogapi.com/v1/images/search?limit=50 and displays their image and supporting information
 
 ## Build and Run
 * Xcode 11 & Swift 5. Minimum version is iOS 12
