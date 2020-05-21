@@ -37,6 +37,8 @@ class DogListViewController: UIViewController {
     }
 
     private func setupUI() {
+        navigationItem.title = NSLocalizedString("DogList", comment: "")
+
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.top.leading.trailing.bottom.equalToSuperview()
