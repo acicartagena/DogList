@@ -1,7 +1,7 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import Foundation
 @testable import DogList
+import Foundation
 
 class DogListViewModelDelegateSpy: DogListViewModelDelegate {
     var calls: [String] = []

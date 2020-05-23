@@ -1,10 +1,9 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import UIKit
 import SnapKit
+import UIKit
 
 class DogListViewController: UIViewController {
-
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = UITableView.automaticDimension
@@ -24,7 +23,7 @@ class DogListViewController: UIViewController {
         viewModel.delegate = self
     }
 
-    required init?(coder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -62,7 +61,7 @@ class DogListViewController: UIViewController {
 }
 
 extension DogListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return viewModel.items.count
     }
 

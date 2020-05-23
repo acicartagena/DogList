@@ -1,10 +1,9 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import XCTest
 @testable import DogList
+import XCTest
 
 class LifeSpanYearTests: XCTestCase {
-
     func testValidConstantYear() {
         let response = "10 years"
         let subject = try! Dog.LifeSpanYear(response: response)
@@ -40,5 +39,4 @@ class LifeSpanYearTests: XCTestCase {
         let response = "10-15 years"
         XCTAssertThrowsError(try Dog.LifeSpanYear(response: response))
     }
-
 }

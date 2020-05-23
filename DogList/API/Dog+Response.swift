@@ -13,7 +13,7 @@ extension Dog {
     init(response: DogListImageResponse) throws {
         guard let breed = response.breeds.first,
             let imageURL = URL(string: response.url)
-            else { throw ProcessingError.data(response.id) }
+        else { throw ProcessingError.data(response.id) }
 
         name = breed.name
         self.imageURL = imageURL
@@ -53,6 +53,5 @@ extension Dog.LifeSpanYear {
             }
             self = .constant(years)
         }
-
     }
 }

@@ -1,7 +1,7 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import Foundation
 import BrightFutures
+import Foundation
 
 protocol DogListActions {
     func fetchImages() -> Future<[Dog], DogListError>
@@ -34,14 +34,14 @@ class DogListService: DogListActions {
         var urlComponents = URLComponents(string: urlString)
         urlComponents?.queryItems = [URLQueryItem(name: "limit", value: "\(limit)"),
                                      URLQueryItem(name: "size", value: size.queryItem)]
-        
+
         guard let url = urlComponents?.url else {
             return Future(error: .invalidURL(urlString))
         }
 
         let tagListResponse: Future<[DogListImageResponse], DogListError> = networking.request(url: url)
         return tagListResponse.map { imageResponses in
-            return imageResponses.compactMap { try? Dog(response: $0) }
+            imageResponses.compactMap { try? Dog(response: $0) }
         }
     }
 }

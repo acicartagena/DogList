@@ -1,9 +1,9 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import Foundation
 @testable import DogList
+import Foundation
 
-//struct Dog {
+// struct Dog {
 //    enum LifeSpanYear {
 //        typealias Min = Int
 //        typealias Max = Int
@@ -23,7 +23,7 @@ import Foundation
 //    let lifeSpan: LifeSpanYear?
 //    let imageURL: URL
 //    let temperament: String?
-//}
+// }
 
 class DogBuilder {
     private var name = "Beagle"
@@ -42,7 +42,7 @@ class DogBuilder {
     }
 
     func with(lifeSpanText: String) -> DogBuilder {
-        self.lifeSpan = try! Dog.LifeSpanYear(response: lifeSpanText)
+        lifeSpan = try! Dog.LifeSpanYear(response: lifeSpanText)
         return self
     }
 
@@ -59,5 +59,4 @@ class DogBuilder {
     func build() -> Dog {
         return Dog(name: name, lifeSpan: lifeSpan, imageURL: imageURL, temperament: temperament)
     }
-
 }

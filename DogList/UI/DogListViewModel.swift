@@ -1,14 +1,13 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import Foundation
 import BrightFutures
+import Foundation
 
 protocol DogListViewModelDelegate: AnyObject, ShowsError {
     func reloadData()
 }
 
 class DogListViewModel {
-
     enum SortBy: CaseIterable {
         case ascending
         case descending
@@ -43,7 +42,7 @@ class DogListViewModel {
     }
 
     func sort(by sortBy: SortBy) {
-        items.sort { (dog1, dog2) in
+        items.sort { dog1, dog2 in
             let lifespan1 = dog1.lifeSpan ?? Dog.LifeSpanYear.constant(0)
             let lifespan2 = dog2.lifeSpan ?? Dog.LifeSpanYear.constant(0)
             switch sortBy {
@@ -60,14 +59,12 @@ class DogListViewModel {
         actions.fetchImages().onComplete(context) { [weak self] result in
             guard let self = self else { return }
             switch result {
-            case .success(let dogs):
+            case let .success(dogs):
                 self.items = dogs
                 self.delegate?.reloadData()
-            case .failure(let error):
+            case let .failure(error):
                 self.delegate?.showError(message: error.displayError)
             }
         }
     }
 }
-
-

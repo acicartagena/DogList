@@ -12,25 +12,24 @@ enum DogListError: Error {
 
     var displayError: String {
         switch self {
-        case .networking(let networkingError):
+        case let .networking(networkingError):
             print("networking: \(networkingError)")
             return networkingError.localizedDescription
-        case .decoding(let decodingError):
+        case let .decoding(decodingError):
             print("decoding: \(decodingError)")
             return NSLocalizedString("Data issue", comment: "")
-        case .invalidURL(let url):
+        case let .invalidURL(url):
             print("invalid url: \(url)")
             return NSLocalizedString("Something went wrong", comment: "")
-        case .invalidData(let error):
+        case let .invalidData(error):
             print("invalid data: \(error)")
             return NSLocalizedString("Data issue", comment: "")
-        case .other(let error):
+        case let .other(error):
             print("other: \(error)")
             return NSLocalizedString("Something went wrong", comment: "")
         case .noData:
             print("no data")
             return NSLocalizedString("No data returned", comment: "")
-
         }
     }
 }

@@ -1,7 +1,7 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import UIKit
 import Kingfisher
+import UIKit
 
 extension UIImageView {
     func prepareForReuse() {

@@ -1,11 +1,10 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import XCTest
 import BrightFutures
 @testable import DogList
+import XCTest
 
 class DogListViewModelTests: XCTestCase {
-
     var actions: DogListActionsStub!
     var delegate: DogListViewModelDelegateSpy!
     var subject: DogListViewModel!
@@ -44,8 +43,8 @@ class DogListViewModelTests: XCTestCase {
         subject.start()
         subject.sort(by: .ascending)
 
-        XCTAssertEqual(self.delegate.calls, ["reloadData()", "reloadData()"])
-        XCTAssertEqual(self.subject.items, [dog2, dog3, dog1])
+        XCTAssertEqual(delegate.calls, ["reloadData()", "reloadData()"])
+        XCTAssertEqual(subject.items, [dog2, dog3, dog1])
     }
 
     func testSortDescending() {
@@ -57,8 +56,7 @@ class DogListViewModelTests: XCTestCase {
         subject.start()
         subject.sort(by: .descending)
 
-        XCTAssertEqual(self.delegate.calls, ["reloadData()", "reloadData()"])
-        XCTAssertEqual(self.subject.items, [dog1, dog3, dog2])
+        XCTAssertEqual(delegate.calls, ["reloadData()", "reloadData()"])
+        XCTAssertEqual(subject.items, [dog1, dog3, dog2])
     }
-
 }

@@ -1,7 +1,7 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import Foundation
 import BrightFutures
+import Foundation
 
 class Networking {
     let session = URLSession(configuration: .default)
@@ -11,10 +11,10 @@ class Networking {
         return decoder
     }()
 
-    func request<T:Decodable>(url: URL) -> Future<T,DogListError> {
-        let promise = Promise<T,DogListError>()
+    func request<T: Decodable>(url: URL) -> Future<T, DogListError> {
+        let promise = Promise<T, DogListError>()
 
-        session.dataTask(with: url) { [weak self] (data, _, error) in
+        session.dataTask(with: url) { [weak self] data, _, error in
             DispatchQueue.main.async {
                 if let error = error {
                     promise.failure(.networking(error))
@@ -29,7 +29,7 @@ class Networking {
                 do {
                     let decoded = try strongSelf.decoder.decode(T.self, from: data)
                     promise.success(decoded)
-                } catch let error {
+                } catch {
                     promise.failure(.decoding(error))
                     return
                 }

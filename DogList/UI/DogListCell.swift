@@ -1,7 +1,7 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import UIKit
 import SnapKit
+import UIKit
 
 extension Dog.LifeSpanYear {
     var display: String {
@@ -15,7 +15,6 @@ extension Dog.LifeSpanYear {
 }
 
 class DogListCell: UITableViewCell {
-
     private static let imageSize = CGSize(width: 160, height: 120)
 
     private let nameLabel: UILabel = {
@@ -53,7 +52,7 @@ class DogListCell: UITableViewCell {
         setupUI()
     }
 
-    required init?(coder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
