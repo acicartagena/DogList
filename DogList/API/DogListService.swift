@@ -1,10 +1,9 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import BrightFutures
 import Foundation
 
 protocol DogListActions {
-    func fetchImages() -> Future<[Dog], DogListError>
+    func fetchImages(completion: @escaping (Result<[Dog], DogListError>) -> Void)
 }
 
 class DogListService: DogListActions {
@@ -25,23 +24,29 @@ class DogListService: DogListActions {
 
     private let networking = Networking()
 
-    func fetchImages() -> Future<[Dog], DogListError> {
-        return fetchImages(limit: defaultLimit, size: defaultSize)
+    func fetchImages(completion: @escaping (Result<[Dog], DogListError>) -> Void) {
+        return fetchImages(limit: defaultLimit, size: defaultSize, completion: completion)
     }
 
-    func fetchImages(limit: Int, size: ImageSize) -> Future<[Dog], DogListError> {
+    func fetchImages(limit: Int, size: ImageSize, completion: @escaping (Result<[Dog], DogListError>) -> Void) {
         let urlString = "https://api.thedogapi.com/v1/images/search"
         var urlComponents = URLComponents(string: urlString)
         urlComponents?.queryItems = [URLQueryItem(name: "limit", value: "\(limit)"),
                                      URLQueryItem(name: "size", value: size.queryItem)]
 
         guard let url = urlComponents?.url else {
-            return Future(error: .invalidURL(urlString))
+            completion(.failure(.invalidURL(urlString)))
+            return
         }
 
-        let tagListResponse: Future<[DogListImageResponse], DogListError> = networking.request(url: url)
-        return tagListResponse.map { imageResponses in
-            imageResponses.compactMap { try? Dog(response: $0) }
+        networking.request(url: url) { (result: Result<[DogListImageResponse], DogListError>) in
+            switch result {
+            case .success(let response):
+                let dogs = response.compactMap { try? Dog(response: $0) }
+                completion(.success(dogs))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
 }
