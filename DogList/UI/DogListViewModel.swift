@@ -1,6 +1,5 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import BrightFutures
 import Foundation
 
 protocol DogListViewModelDelegate: AnyObject, ShowsError {
@@ -29,12 +28,8 @@ class DogListViewModel {
     private let actions: DogListActions
     weak var delegate: DogListViewModelDelegate?
 
-    private let threadingModel: ThreadingModel
-    private var context: ExecutionContext { return threadingModel() }
-
-    init(actions: DogListActions = DogListService(), threadingModel: @escaping ThreadingModel = DefaultThreadingModel) {
+    init(actions: DogListActions = DogListService()) {
         self.actions = actions
-        self.threadingModel = threadingModel
     }
 
     func start() {
@@ -56,7 +51,7 @@ class DogListViewModel {
     }
 
     private func fetchItems() {
-        actions.fetchImages().onComplete(context) { [weak self] result in
+        actions.fetchImages() { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(dogs):

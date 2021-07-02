@@ -25,8 +25,6 @@ DogList gets a list of dogs using https://api.thedogapi.com/v1/images/search?lim
 * Swift Package Manager for dependency management
 * Kingfisher 3rd party library for asynchronously fetching of images. This is done behind and UIImageView extension which makes it easier to swap it with a different 3rd party or refactor into something bespoke for the app.
 * SnapKit for AutoLayout constraints. This can be replaced by using the iOS native frameworks.
-* BrightFutures for handling asynchronous code. An alternative is using blocks or delegate pattern.
-
 
 ## Assumptions
 * Initial data fetched is not going to be sorted. 

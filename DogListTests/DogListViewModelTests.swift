@@ -1,6 +1,5 @@
 //  Copyright © 2020 ACartagena. All rights reserved.
 
-import BrightFutures
 @testable import DogList
 import XCTest
 
@@ -12,7 +11,7 @@ class DogListViewModelTests: XCTestCase {
     override func setUpWithError() throws {
         actions = DogListActionsStub()
         delegate = DogListViewModelDelegateSpy()
-        subject = DogListViewModel(actions: actions, threadingModel: { ImmediateExecutionContext })
+        subject = DogListViewModel(actions: actions)
         subject.delegate = delegate
     }
 
